@@ -53,7 +53,7 @@ const adminSchema = new mongoose.Schema(
 const Admin = mongoose.model("Admin", adminSchema);
 
 // Login route
-app.post("/login", async (req, res) => {
+app.post("/api/login", async (req, res) => {
   const { studentNumber, password } = req.body;
   console.log("Login attempt:", studentNumber, password);
 
@@ -97,7 +97,7 @@ app.post("/login", async (req, res) => {
 });
 
 // Register route
-app.post("/register", async (req, res) => {
+app.post("/api/register", async (req, res) => {
   try {
     const {
       fullName,
