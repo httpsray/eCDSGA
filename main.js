@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const studentNumber = loginForm.studentNumber.value;
-    const password = loginForm.password.value;
+    const studentNumber = loginForm.studentNumber.value.trim();
+    const password = loginForm.password.value.trim();
 
     try {
       const response = await fetch('https://ecdsga.onrender.com/api/login', {
@@ -88,12 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const formData = {
       fullName: registerForm.fullName.value,
-      studentNumber: registerForm.studentNumber.value,
+      studentNumber: registerForm.studentNumber.value.trim(),
       program: registerForm.program.value,
       yearSection: registerForm.yearSection.value,
       status: registerForm.status.value,
       gender: registerForm.gender.value,
-      password: registerForm.password.value,
+      password: registerForm.password.value.trim(),
     };
 
     try {

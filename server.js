@@ -3,7 +3,6 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require('cors');
 
-
 // MongoDB connection
 mongoose.connect("mongodb+srv://admin123:admin123@ecdsga.eknlq8q.mongodb.net/", {
   useNewUrlParser: true,
@@ -69,8 +68,8 @@ app.post("/api/login", async (req, res) => {
       return res.status(401).send("User not found.");
     }
 
-    if (String(user.password) !== String(password)) {
-      console.log("Password mismatch:", user.password, "!=", password);
+    if (user.password.trim() !== password.trim()) {
+      console.log("Password mismatch:", `"${user.password}"`, "!=", `"${password}"`);
       return res.status(401).send("Invalid password.");
     }
 
@@ -108,7 +107,7 @@ app.post("/api/register", async (req, res) => {
       status,
       gender,
       password,
-      role = ["student"], // default to student if not provided
+      role = ["student"],
     } = req.body;
 
     const existingStudent = await Student.findOne({ studentNumber });
