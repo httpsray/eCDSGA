@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard - CDSGA+</title>
+  <link rel="stylesheet" href="student.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2 class="logo">CDSGA+</h2>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Profile</a></li>
+          <li><a href="#">Prelim</a></li>
+          <li><a href="#">Midterm</a></li>
+          <li><a href="#">Semis</a></li>
+          <li><a href="#">Finals</a></li>
+          <li><a href="#">Payment</a></li>
+          <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Welcome, Student!</h1>
+      </header>
+
+      <section class="dashboard-section">
+        <h2>Dashboard Overview</h2>
+        <div class="cards">
+          <div class="card">Prelim Payment: <strong>Not Available</strong></div>
+          <div class="card">Midterm Payment: <strong>Not Available</strong></div>
+          <div class="card">Semis Payment: <strong>Not Available</strong></div>
+          <div class="card">Final Payment: <strong>Not Available</strong></div>
+        </div>
+      </section>
+
+      <section class="payment-section">
+        <h2>PayMongo Payments</h2>
+        <p>This section will integrate PayMongo for tuition payments. Coming soon!</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+      const studentName = localStorage.getItem("StudentName");
+    if (studentName) {
+      document.getElementById("welcomeText").innerText = `Welcome, ${StudentName}!`;
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      window.location.href = "index.html"; // your login form
+    });
+  </script>
+
+</body>
+</html>

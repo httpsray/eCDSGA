@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - CDSGA+</title>
+  <link rel="stylesheet" href="admin.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2 class="logo">CDSGA+</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Students</a></li>
+          <li><a href="#">Registrations</a></li>
+          <li><a href="#">Payments</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Welcome, Admin!</h1>
+      </header>
+
+      <section class="dashboard-cards">
+        <div class="card">
+          <h3>Total Students</h3>
+          <p>215</p>
+        </div>
+        <div class="card">
+          <h3>Pending Registrations</h3>
+          <p>8</p>
+        </div>
+        <div class="card">
+          <h3>Payment Requests</h3>
+          <p>5</p>
+        </div>
+        <div class="card">
+          <h3>Admin Notes</h3>
+          <p>3 tasks due</p>
+        </div>
+      </section>
+
+      <section class="activity-section">
+        <h2>Recent Activity</h2>
+        <ul class="activity-list">
+          <li>Student A202110611 submitted registration.</li>
+          <li>Student A202110620 requested payment confirmation.</li>
+          <li>Profile updated for student A202110601.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = "index.html"; // Change to your login file if named differently
+    });
+  </script>
+</body>
+</html>

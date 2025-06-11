@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eCDSGA+</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splashScreen" class="center-screen">
+    <img id="splash" src="assets/logo.png" alt="eCDSGA+" class="logo-animation" />
+  </div>
+
+  <!-- Login Form -->
+  <div id="root" class="center-screen" style="display: none;">
+    <form>
+      <h2 style="text-align: center;">Login to eCDSGA+</h2>
+      <label for="studentNumber">Student Number</label>
+      <input type="text" id="studentNumber" name="studentNumber" required />
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+      
+      <button type="submit" class="login-btn">Login</button>
+      <p class="toggle-link">Don't have an account? <a href="#" onclick="showRegister()">Create one</a></p>
+    </form>
+  </div>
+
+  <!-- Registration Form -->
+  <div id="registerForm" class="center-screen" style="display: none;">
+    <form id="registerFormElement">
+      <h2 style="text-align: center;">Create Account</h2>
+
+      <label for="regFullName">Full Name</label>
+      <input type="text" id="regFullName" name="fullName" required />
+
+      <label for="regStudentNumber">Student Number</label>
+      <input type="text" id="regStudentNumber" name="studentNumber" required />
+
+      <label for="regProgram">Program</label>
+      <input type="text" id="regProgram" name="program" required />
+
+      <label for="regYearSection">Year & Section</label>
+      <input type="text" id="regYearSection" name="yearSection" required />
+
+      <label for="regStatus">Status</label>
+      <input type="text" id="regStatus" name="status" required />
+
+      <label for="regGender">Gender</label>
+      <input type="text" id="regGender" name="gender" required />
+
+      <label for="regPassword">Password</label>
+      <input type="password" id="regPassword" name="password" required />
+
+      <button type="submit" class="register-btn">Register</button>
+      <p class="toggle-link">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </form>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
