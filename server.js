@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require('cors');
-app.use(cors());
+
 
 // MongoDB connection
 mongoose.connect("mongodb+srv://admin123:admin123@ecdsga.eknlq8q.mongodb.net/", {
@@ -19,6 +19,7 @@ db.once("open", () => {
 // Express setup
 const app = express();
 const PORT = 3000;
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
