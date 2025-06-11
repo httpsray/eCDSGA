@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 // MongoDB connection
-mongoose.connect("mongodb://localhost:27017/CDSGA", {
+mongoose.connect("mongodb+srv://admin123:admin123@ecdsga.eknlq8q.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
